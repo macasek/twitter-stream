@@ -189,11 +189,11 @@ module Twitter
 
       content = @options[:content]
 
-      unless q = query.empty?
+      unless query.empty?
         if @options[:method].to_s.upcase == 'GET'
-          request_uri << "?#{q}"
+          request_uri << "?#{query}"
         else
-          content = q
+          content = query
         end
       end
 
